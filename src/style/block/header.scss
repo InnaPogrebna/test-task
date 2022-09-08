@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $colorWhite;
+
+  &__logo {
+    @extend %Sora-Regular;
+    font-size: 24px;
+    margin: auto 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 20px;
+    }
+  }
+
+  &__search {
+    @extend %Sora-Regular;
+    font-size: 24px;
+    padding: 20px 35px;
+    color: $colorWhite;
+    width: 248px;
+    background-color: $colorButton;
+    border: 1px solid $colorButton;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+      @extend %Sora-Regular;
+      color: $colorWhite;
+    }
+
+    &:active,
+    &:focus {
+      width: 400px;
+
+      @media (max-width: 1024px) {
+        font-size: 20px;
+        width: 250px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 20px;
+      width: 200px;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.users {
+  width: 870px;
+  margin: auto;
+  padding-top: 35px;
+  margin-bottom: 100px;
+  display: flex;
+
+  @media (max-width: 1024px) {
+    width: 450px;
+    margin-bottom: 90px;
+  }
+
+  @media (max-width: 600px) {
+    width: 260px;
+    margin-bottom: 90px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $colorCard;
+      color: $colorWhite;
+      @extend %Sora-Regular;
+      font-size: 24px;
+      width: 420px;
+      height: 370px;
+      border-radius: 40px;
+      text-align: center;
+      line-height: 30px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+        width: 260px;
+      }
+    }
+
+    &-button {
+      width: 248px;
+      @extend %Sora-Bold;
+      font-size: 24px;
+      margin: 0 auto;
+      margin-top: 30px;
+      padding: 20px 0;
+      color: $colorWhite;
+      border: 1px solid transparent;
+      background-color: $colorButton;
+      border: 1px solid $colorButton;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border: 1px solid $colorBackground;
+        color: $colorBackground;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+        width: 180px;
+      }
+    }
+  }
+}
+
+.is-open__users {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &-wrapper {
+    height: 600px;
+
+    @media (max-width: 1269px) {
+      width: 600px;
+    }
+  }
+
+  &-item {
+    font-size: 16px;
+    width: 270px;
+    height: 265px;
+  }
+
+  &-button {
+    width: 196px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,70 @@
+.pagination {
+  width: 73%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 66px;
+  margin: 0 54px;
+  opacity: 1;
+
+  @media (max-width: 1490px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1024px) {
+    width: 73%;
+  }
+
+  @media (max-width: 460px) {
+    width: 56%;
+  }
+
+  &__button {
+    color: $colorWhite;
+    @extend %Sora-Regular;
+    font-size: 24px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @media (max-width: 600px) {
+      font-size: 18px;
+    }
+
+    &--prev::before {
+      content: url("../../images/prev.svg");
+      position: absolute;
+      width: 18px;
+      height: 30px;
+      left: -54px;
+      top: -5px;
+
+      @media (max-width: 460px) {
+        transform: scale(0.6);
+        left: -34px;
+        top: -8px;
+      }
+    }
+
+    &--next::after {
+      content: url("../../images/next.svg");
+      position: absolute;
+      width: 18px;
+      height: 30px;
+      right: -54px;
+      top: -5px;
+
+      @media (max-width: 460px) {
+        transform: scale(0.6);
+        right: -34px;
+        top: -8px;
+      }
+    }
+  }
+
+  &__disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+}
