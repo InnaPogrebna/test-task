@@ -1,3 +1,9 @@
-.starter {
-  font-size: 18px;
-}
+@import '../src/style/utils/extends';
+@import '../src/style/utils/vars';
+
+@import "./style/block/reset";
+@import "./style/block/page";
+@import "./style/block/header";
+@import "./style/block/users";
+@import "./style/block/pagination";
+@import "./style/block/posts";
